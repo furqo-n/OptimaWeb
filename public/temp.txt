@@ -1,0 +1,2 @@
+<?php
+// This is not a file write tool for JS, I should use write_to_file for script.js
