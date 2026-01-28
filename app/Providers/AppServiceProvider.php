@@ -21,11 +21,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $logodata = DB::connection('mysql_admin')->table('gambars')->where('id', '7')->first();
-        $logodata2 = DB::connection('mysql_admin')->table('gambars')->where('id', '8')->first();
-        $gambardata = DB::connection('mysql_admin')->table('gambars')->pluck('gambar', 'kategori');
-        View::share('logo', $logodata);
-        View::share('logo2', $logodata2);
-        View::share('gambardata', $gambardata);
+        View::composer('*', function ($view) {
+            try {
+                $logodata = DB::connection('mysql_admin')->table('gambars')->where('id', '7')->first();
+                $logodata2 = DB::connection('mysql_admin')->table('gambars')->where('id', '8')->first();
+                $gambardata = DB::connection('mysql_admin')->table('gambars')->pluck('gambar', 'kategori');
+
+                $view->with('logo', $logodata);
+                $view->with('logo2', $logodata2);
+                $view->with('gambardata', $gambardata);
+            } catch (\Exception $e) {
+                // Prevent boot errors if DB is missing configuration or connection
+            }
+        });
     }
 }
