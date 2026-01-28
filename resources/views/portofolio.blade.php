@@ -38,8 +38,8 @@
                                                         <div class="container-fluid py-4">
                                                             <div class="row">
                                                                 <div class="col-md-12 px-5">
-                                                                    <img src="{{env('ADMIN_URL') . '/storage/portofolio/' . $project->image}}"
-                                                                        class="img-fluid" alt="{{ $project->title }}">
+                                                                    <img src="{{ $project->image }}" class="img-fluid"
+                                                                        alt="{{ $project->title }}">
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -4,7 +4,7 @@
 
 <style>
     .tentang-hero-bg {
-        background-image: url("{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TK_1'] }}");
+        background-image: url("{{ $gambardata['TK_1'] }}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -67,7 +67,7 @@
                 <div class="trusted-logos-scroll">
                     @foreach ($kliens as $item)
                         <div class="trusted-logo-item">
-                            <img src="{{ env('ADMIN_URL') . '/storage/klien/' . $item->logo }}" alt="{{ $item->nama }}">
+                            <img src="{{ $item->logo }}" alt="{{ $item->nama }}">
                         </div>
                     @endforeach
                 </div>
@@ -137,8 +137,7 @@
                         • Penggunaan software yang berbasis opensource, sehingga menekan biaya operasional.</p>
                 </div>
                 <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TK_2'] }}" alt="Logo"
-                        class="img-fluid" style="max-height: 400px;">
+                    <img src="{{ $gambardata['TK_2'] }}" alt="Logo" class="img-fluid" style="max-height: 400px;">
                 </div>
             </div>
         </div>
@@ -167,8 +166,8 @@
                         <div class="container pb-5 pt-5" style="background-color: #F6F6F6;">
                             <div class="row align-items-center">
                                 <div class="col-md-6 text-center mb-4 mb-md-0">
-                                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TK_visi'] }}"
-                                        alt="Logo" class="img-fluid" style="max-height: 400px;">
+                                    <img src="{{ $gambardata['TK_visi'] }}" alt="Logo" class="img-fluid"
+                                        style="max-height: 400px;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Visi</h2>
@@ -207,8 +206,8 @@
                                         </ol>
                                     </div>
                                     <div class="col-md-6 text-center mb-4 mb-md-0">
-                                        <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TK_misi'] }}"
-                                            alt="Logo" class="img-fluid" style="max-height: 400px;">
+                                        <img src="{{ $gambardata['TK_misi'] }}" alt="Logo" class="img-fluid"
+                                            style="max-height: 400px;">
                                     </div>
                                 </div>
                             </div>

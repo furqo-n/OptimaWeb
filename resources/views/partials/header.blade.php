@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-modern sticky-top">
     <div class="container">
         <a class="navbar-brand-modern" href="{{ url('/') }}">
-            <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $logo2->gambar }}" alt="Optima Multi Sinergi"
+            <img src="{{ $logo2->gambar }}" alt="Optima Multi Sinergi"
                 height="45">
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

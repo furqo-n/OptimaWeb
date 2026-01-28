@@ -14,8 +14,7 @@
             <p class="fst-italic fs-5 text-muted mb-5">
                 Tim khusus yang kami susun untuk mitra!
             </p>
-            <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TPLK_1'] }}" alt="Tim Khusus"
-                class="img-fluid mx-auto d-block rounded shadow"
+            <img src="{{ $gambardata['TPLK_1'] }}" alt="Tim Khusus" class="img-fluid mx-auto d-block rounded shadow"
                 style="max-height: 400px; width: 100%; object-fit: cover;">
         </div>
     </div>
@@ -124,8 +123,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['TPLK_2'] }}" alt="Handshake"
-                        class="img-fluid rounded shadow-sm">
+                    <img src="{{ $gambardata['TPLK_2'] }}" alt="Handshake" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-6">
                     <p class="text-secondary text-justify">

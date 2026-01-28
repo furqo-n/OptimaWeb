@@ -44,8 +44,7 @@
                 <!-- Left: Image -->
                 <div class="col-lg-7">
                     <div class="shadow rounded-3 overflow-hidden position-relative">
-                        <img src="{{ env('ADMIN_URL') . '/storage/portofolio/' . $detailproyek->image }}"
-                            alt="Project Image" class="w-100 h-100 object-fit-cover">
+                        <img src="{{ $detailproyek->image }}" alt="Project Image" class="w-100 h-100 object-fit-cover">
                     </div>
                 </div>
 

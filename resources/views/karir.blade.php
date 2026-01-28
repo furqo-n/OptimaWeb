@@ -18,8 +18,7 @@
                         <div class="container-fluid py-4">
                             <div class="row">
                                 <div class="col-md-12 px-1">
-                                    <img src="{{ env('ADMIN_URL') . '/storage/karir/' . $karir->gambar }}" class="img-fluid"
-                                        alt="{{ $karir->nama }}">
+                                    <img src="{{ $karir->gambar }}" class="img-fluid" alt="{{ $karir->nama }}">
                                 </div>
                             </div>
                         </div>
@@ -41,8 +40,7 @@
 
                                 {{-- Gambar di Modal --}}
                                 <div class="text-center mb-4">
-                                    <img src="{{ env('ADMIN_URL') . '/storage/karir/' . $karir->gambar }}" class="img-fluid"
-                                        style="max-height: 300px;">
+                                    <img src="{{ $karir->gambar }}" class="img-fluid" style="max-height: 300px;">
                                 </div>
                                 @php
                                     $list_kualifikasi = json_decode($karir->kualifikasi);

@@ -14,8 +14,7 @@
                         <div class="col-md-4">
                             <div class="tech-card">
                                 <div class="tech-img-wrapper">
-                                    <img src="{{ env('ADMIN_URL') . '/storage/teknologi/' . $teknologi->logo }}"
-                                        alt="{{ $teknologi->nama }}" class="tech-img">
+                                    <img src="{{ $teknologi->logo }}" alt="{{ $teknologi->nama }}" class="tech-img">
                                 </div>
                                 <h4 class="tech-title">{{ $teknologi->nama }}</h4>
                                 <p class="tech-description">{!! $teknologi->deskripsi !!}</p>

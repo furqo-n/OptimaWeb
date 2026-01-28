@@ -73,8 +73,7 @@
                 <!-- Company Info -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-section">
-                        <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $logo2->gambar }}" alt="Logo" height="50"
-                            class="mb-3">
+                        <img src="{{ $logo2->gambar }}" alt="Logo" height="50" class="mb-3">
                         <h5 class="footer-title">Optima Multi Sinergi</h5>
                         <p class="footer-text">Perusahaan pengembang perangkat lunak profesional yang
                             berpengalaman bertahun-tahun dalam menciptakan solusi teknologi berkualitas.</p>

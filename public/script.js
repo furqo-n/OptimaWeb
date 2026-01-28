@@ -1,6 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'http://localhost:8000/api';
-const STORAGE_URL = 'http://localhost:8000/storage';
+const API_BASE_URL = '/api';
 
 async function fetchData(endpoint) {
     try {
@@ -50,10 +49,10 @@ async function loadPortfolios() {
                     <div class="col-md-4">
                         <div class="project-card">
                             <div class="project-image-container">
-                                <img src="${p.image_url}" alt="${p.title}">
+                                <img src="${p.image}" alt="${p.title}">
                                 <div class="project-image-overlay">
                                     <div class="btn-zoom" data-bs-toggle="modal"
-                                        data-bs-target="#imagePreviewModal" data-bs-image="${p.image_url}">
+                                        data-bs-target="#imagePreviewModal" data-bs-image="${p.image}">
                                         <i class='bx bxs-fullscreen'></i>
                                     </div>
                                 </div>
@@ -117,7 +116,7 @@ async function loadClients() {
                         <div class="col-lg-2 col-md-4 col-6 mb-4">
                             <div class="client-logo-card shadow-sm mb-3">
                                 <div class="logo-wrapper">
-                                    <img src="${client.logo_url}" alt="${client.nama}">
+                                    <img src="${client.logo}" alt="${client.nama}">
                                 </div>
                                 <p class="logo-title">${client.nama}</p>
                             </div>
@@ -153,7 +152,7 @@ async function loadProjectDetail() {
         setText('project-title', project.title);
 
         const imgEl = document.getElementById('project-image');
-        if (imgEl) imgEl.src = project.image_url;
+        if (imgEl) imgEl.src = project.image;
 
         setText('detail-name', project.title);
         setText('detail-category', project.category);

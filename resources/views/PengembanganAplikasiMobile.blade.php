@@ -21,8 +21,7 @@
     <div class="container pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['PAM_1'] }}" alt="Web Development"
-                    class="img-fluid rounded shadow-sm">
+                <img src="{{ $gambardata['PAM_1'] }}" alt="Web Development" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-md-6">
                 <p class="text-secondary text-justify">
@@ -59,8 +58,8 @@
                 </div>
                 <div class="col-md-6 text-center">
                     <!-- Placeholder for tech code image -->
-                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['PAM_2'] }}" alt="Technology Code"
-                        class="img-fluid rounded shadow-sm" style="max-height: 300px; width: 100%; object-fit: cover;">
+                    <img src="{{ $gambardata['PAM_2'] }}" alt="Technology Code" class="img-fluid rounded shadow-sm"
+                        style="max-height: 300px; width: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -148,8 +147,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $gambardata['PAM_3'] }}" alt="Handshake"
-                        class="img-fluid rounded shadow-sm">
+                    <img src="{{ $gambardata['PAM_3'] }}" alt="Handshake" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-6">
                     <p class="text-secondary text-justify">

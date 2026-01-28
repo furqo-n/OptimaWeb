@@ -6,7 +6,7 @@
     .quote-section {
         position: relative;
         padding: 30px 0;
-        background-image: url("{{ env('ADMIN_URL') . '/storage/gambar/' . $text1->gambar }}");
+        background-image: url("{{ $text1->gambar }}");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -25,7 +25,7 @@
                 <div class="carousel-inner">
                     @foreach ($hero as $h)
                         <div class="carousel-item {{ $loop->first ? 'active' : '' }}"
-                            style="background-image: url('{{ env('ADMIN_URL') . '/storage/gambar/' . $h->gambar }}');">
+                            style="background-image: url('{{ $h->gambar }}');">
                         </div>
                     @endforeach
                 </div>
@@ -34,8 +34,7 @@
         <div class="container position-relative z-2">
             <div class="row align-items-center" style="min-height: 80vh;">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="{{ env('ADMIN_URL') . '/storage/gambar/' . $logo->gambar }}" alt="Logo" height="100"
-                        class="mb-4 d-none d-md-block">
+                    <img src="{{ $logo->gambar }}" alt="Logo" height="100" class="mb-4 d-none d-md-block">
                     <h2 class="text-uppercase text-secondary fw-bold ls-2">Pengembangan Perangkat Lunak</h2>
                     <h1 class="display-3 fw-bolder text-dark mb-4 raleway-font">KAMI AHLINYA</h1>
                     <div style="width: 100px; height: 6px; background: #FDBF11; margin-bottom: 2rem;"></div>
@@ -270,13 +269,12 @@
                                     <div class="col-md-4">
                                         <div class="project-card">
                                             <div class="project-image-container">
-                                                <img src="{{ env('ADMIN_URL') . '/storage/portofolio/' . $project->image }}"
-                                                    alt="{{ $project->title }}"
+                                                <img src="{{ $project->image }}" alt="{{ $project->title }}"
                                                     onerror="this.onerror=null; this.src='{{ asset('images/default-placeholder.png') }}'">
                                                 <div class="project-image-overlay">
                                                     <div class="btn-zoom" data-bs-toggle="modal"
                                                         data-bs-target="#imagePreviewModal"
-                                                        data-bs-image="{{ env('ADMIN_URL') . '/storage/portofolio/' . $project->image }}">
+                                                        data-bs-image="{{ $project->image }}">
                                                         <i class='bx bxs-fullscreen'></i>
                                                     </div>
                                                 </div>
@@ -333,8 +331,7 @@
                                                 <div class="col-lg-3 col-md-4 col-6 mb-4">
                                                     <div class="client-logo-card shadow-sm mb-3">
                                                         <div class="logo-wrapper">
-                                                            <img src="{{ env('ADMIN_URL') . '/storage/klien/' . $klien->logo }}"
-                                                                alt="{{ $klien->nama }}">
+                                                            <img src="{{ $klien->logo }}" alt="{{ $klien->nama }}">
                                                         </div>
                                                         <p class="logo-title">{{ $klien->nama }}</p>
                                                     </div>

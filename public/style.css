@@ -859,7 +859,7 @@
 
 /* Gradient Background Process Card */
 .exp-process-card-gradient {
-    background-image: url('src/gradien bg.jpg');
+    background: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
