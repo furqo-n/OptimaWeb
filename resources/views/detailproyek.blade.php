@@ -111,7 +111,7 @@
                             @foreach ($advantages as $item)
                                 <div class="d-flex align-items-start h-100 col-md-6 mb-4">
                                     <div class="flex-shrink-0 me-3">
-                                        <i class="{{$item->icon}}" style="color: #FDBF11;"></i>
+                                        <i class="{{$item->icon}}" style="font-size: 2rem; color: #FDBF11;"></i>
                                     </div>
                                     <div>
                                         <h5 class="fw-bold mb-2">{{ $item->title }}</h5>
