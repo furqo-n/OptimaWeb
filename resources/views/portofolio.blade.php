@@ -37,9 +37,16 @@
                                                         style="background-color: #fcfbfb !important;">
                                                         <div class="container-fluid py-4">
                                                             <div class="row">
-                                                                <div class="col-md-12 px-5">
-                                                                    <img src="{{ $project->image }}" class="img-fluid"
-                                                                        alt="{{ $project->title }}">
+                                                                <div class="project-image-container">
+                                                                    <img src="{{ $project->image }}" alt="{{ $project->title }}"
+                                                                        onerror="this.onerror=null; this.src='{{ asset('images/default-placeholder.png') }}'">
+                                                                    <div class="project-image-overlay">
+                                                                        <div class="btn-zoom" data-bs-toggle="modal"
+                                                                            data-bs-target="#imagePreviewModal"
+                                                                            data-bs-image="{{ $project->image }}">
+                                                                            <i class='bx bxs-fullscreen'></i>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
