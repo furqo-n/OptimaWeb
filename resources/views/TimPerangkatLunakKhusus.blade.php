@@ -49,72 +49,19 @@
         </div>
 
         <div class="row g-4">
-            <!-- Item 1 -->
-            <div class="col-md-6">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="fs-1 text-primary">
-                        <i class='bx bxs-check-circle icon-gradient'></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold">
-                            Menghemat biaya
-                        </h5>
-                        <p class="text-secondary small">Kami memilih tim dengan cermat dan teliti untuk menekan biaya
-                            pada mitra semenarik mungkin. </p>
+            @foreach ($features as $feature)
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="fs-1 text-primary">
+                            <i class='{{ $feature['icon'] }} icon-gradient'></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">{{ $feature['title'] }}</h5>
+                            <p class="text-secondary small">{{ $feature['graph'] }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="col-md-6">
-                <div class="d-flex align-cup gap-3">
-                    <div class="fs-1 text-primary">
-                        <i class='bx bxs-phone icon-gradient'></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold">Komunikasi</h5>
-                        <p class="text-secondary small">Tim kami berada ditempat mitra kami sehingga komunikasi bisa
-                            berjalan dengan baik.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="col-md-6">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="fs-1 text-primary">
-                        <i class='bx bxs-community icon-gradient'></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold">Profesional</h5>
-                        <p class="text-secondary small">Tim yang kami susun merupakan tim profesional yang telah
-                            berpengalaman untuk mitra kami.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 4 -->
-            <div class="col-md-6">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="fs-1 text-primary">
-                        <i class='bx bxs-cog bx-spin icon-gradient'></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold">Fleksibilitas</h5>
-                        <p class="text-secondary small">Mitra mendapatkan tim dengan fleksibilatas yang tinggi, sehingga
-                            mitra mendapatkan hasil yang lebih baik.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="fs-1 text-primary">
-                        <i class='bx bxs-select icon-gradient'></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold">Pilihan</h5>
-                        <p class="text-secondary small">Mitra bisa memilih personil dalam tim yang akan ditempatkan pada
-                            mitra tersebut.</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 

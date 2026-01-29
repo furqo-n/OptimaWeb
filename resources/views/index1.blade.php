@@ -158,80 +158,16 @@
             <div class="marquee-container">
                 <div class="marquee-track">
                     <!-- Original Items -->
-                    <div class="pill-card">
-                        <i class='bx bx-community icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Tim</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-code icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Clean Code</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-diamond-alt icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Terjangkau</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-sitemap icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Scrum</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-like icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Perangkat Lunak Berkualitas</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-check-square icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Transparan & Jujur</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-copy-list icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">TDD</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-rocket icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Inovatif</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-light-bulb-alt icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Creatif</h5>
-                    </div>
-
-                    <!-- Duplicated Items for Seamless Loop -->
-                    <div class="pill-card">
-                        <i class='bx bx-community icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Tim</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-code icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Clean Code</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-diamond-alt icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Terjangkau</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-sitemap icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Scrum</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-like icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Perangkat Lunak Berkualitas</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-check-square icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Transparan & Jujur</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-copy-list icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">TDD</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-rocket icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Inovatif</h5>
-                    </div>
-                    <div class="pill-card">
-                        <i class='bx bx-light-bulb-alt icon-gradient fs-1 mb-2'></i>
-                        <h5 class="fw-bold">Creatif</h5>
-                    </div>
+                    @for ($i = 0; $i < 2; $i++)
+                        @foreach($features as $feature)
+                            <div class="col-md-4"> {{-- Grid wrapper --}}
+                                <div class="pill-card text-center p-3">
+                                    <i class="{{ $feature['icon'] }} icon-gradient fs-1 mb-2"></i>
+                                    <h5 class="fw-bold">{{ $feature['title'] }}</h5>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endfor
                 </div>
             </div>
         </div>
