@@ -160,10 +160,12 @@
                     <!-- Original Items -->
                     @for ($i = 0; $i < 2; $i++)
                         @foreach($features as $feature)
-                            <div class="col-md-4"> {{-- Grid wrapper --}}
-                                <div class="pill-card text-center p-3">
-                                    <i class="{{ $feature['icon'] }} icon-gradient fs-1 mb-2"></i>
-                                    <h5 class="fw-bold">{{ $feature['title'] }}</h5>
+                            <div class="row">
+                                <div class="col-md-4"> {{-- Grid wrapper --}}
+                                    <div class="pill-card text-center p-3">
+                                        <i class="{{ $feature['icon'] }} icon-gradient fs-1 mb-2"></i>
+                                        <h5 class="fw-bold">{{ $feature['title'] }}</h5>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
