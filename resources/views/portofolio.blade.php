@@ -36,7 +36,7 @@
                                                     <div class="text-center btn-outline-none shadow p-3 h-100 bg-body rounded d-flex flex-column"
                                                         style="background-color: #fcfbfb !important;">
                                                         <div class="container-fluid py-4">
-                                                            <div class="row">
+                                                            <div class="project-image-container">
                                                                 <div class="project-image-container">
                                                                     <img src="{{ $project->image }}" alt="{{ $project->title }}"
                                                                         onerror="this.onerror=null; this.src='{{ asset('images/default-placeholder.png') }}'">
